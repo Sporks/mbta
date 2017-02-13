@@ -1,0 +1,24 @@
+{
+  "name": "mbta",
+  "version": "1.0.0",
+  "description": "MBTA Train Schedule",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sporks/mbta.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sporks/mbta/issues"
+  },
+  "homepage": "https://github.com/Sporks/mbta#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7"
+  }
+}
