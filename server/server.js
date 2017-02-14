@@ -6,8 +6,9 @@ const path = require('path');
 const request = require('request');
 const getSchedule = require('./middleware/getSchedule');
 
-app.get('/', function (req, res) {
-  res.send("HELLO");
+app.get('/', getSchedule.download, function (req, res) {
+  console.log(res.sched);
+  res.send(res.sched);
 } );
 
 app.listen(3000);
