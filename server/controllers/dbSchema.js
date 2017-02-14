@@ -3,6 +3,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
 let trainSchema = new Schema({
   row: {type: Number, index: true},
   timeNow: {type: Date, default: Date.now},
