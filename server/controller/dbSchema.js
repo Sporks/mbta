@@ -15,4 +15,4 @@ let trainSchema = new Schema({
   status: Number
 });
 
-module.exports = mongoose.model('trainSchema', trainSchema);
+module.exports = mongoose.model('train', trainSchema);
