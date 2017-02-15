@@ -19,7 +19,7 @@ db.once( 'open', function () {
 } );
 
 
-app.get('/', getSchedule.checkCache, getSchedule.download, function (req, res) {
+app.get('/schedule', getSchedule.checkCache, getSchedule.download, function (req, res) {
   // console.log(res.sched);
   res.send(res.sched);
 } );

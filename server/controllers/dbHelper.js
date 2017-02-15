@@ -1,19 +1,22 @@
 'use strict'
 
-const schema = require('./dbSchema');
+const Schema = require('./dbSchema');
 
 let dbHelper = {
-    addToDB: function (entries) {
-      let query = schema.where({row: entry.row});
-      let rows = [];
-      for(let i = 0; i < Object.keys(entries); i++) {
-        rows.push(entries[i].row);
-      }
-      console.log(rows);
+    addToDB: function (entry) {
+      let query = Schema.where({row: entry.row});
+      let schema = new Schema();
+      return Schema.findOneAndUpdate({row: entry.row}, entry, {upsert: true, new: true}).exec();
+      // , function(err, doc) {
+      //   if(err) console.log(err);
+      // });
     },
-
+    retrieve: function () {
+      return Schema.find({}).exec();
+    },
+    
     latestTime: function () {
-      let query = schema.where({row: 0});
+      let query = Schema.where({row: 0});
       return query.findOne().exec();
     }
 };
