@@ -6,14 +6,14 @@ const Schema = mongoose.Schema;
 
 let trainSchema = new Schema({
   row: {type: Number, index: true},
-  timeNow: {type: Date, default: Date.now},
-  origin: String,
-  trip: String,
-  destination: String,
-  scheduled: Date,
-  lateness: Number,
-  track: Number,
-  status: Number
+  TimeStamp: {type: Date, default: Date.now},
+  Origin: String,
+  Trip: String,
+  Destination: String,
+  ScheduledTime: Date,
+  Lateness: Number,
+  Track: Number,
+  Status: Number
 });
 
 module.exports = mongoose.model('train', trainSchema);

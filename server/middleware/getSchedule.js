@@ -17,29 +17,33 @@ let schedules = {
        If the the latest time was 30 seconds or less, just return the information in the db
        otherwise, lets go fetch and parse it.
        If it doesn't exist at all, fetch and parse it */
-    res.sched = schedules.download(res);
-
-    // let lastTime = dbHelper.latestTime();
-    // if (lastTime === -1 || lastTime > cacheTime * 1000) {
-    //   res.sched = this.download();
-    // }
-    // else {
-    //   console.log('lastTime')
-    //   res.sched = "333";
-    // }
+    dbHelper.latestTime().then(function(doc) {
+      if(Date.now() - doc.TimeStamp > cacheTime || !doc) {
+        next();
+      }
+    },
+    function(err){
+      console.log(err);
+    });
     next();
   },
 
-  download: function (res) {
+  download: function (req, res, next) {
     //csvjson options
-    console.log("download")
     let options = {
       delimeter: ',',
       quote: '"'
     };
     request('http://developer.mbta.com/lib/gtrtfs/Departures.csv', function (error, response, body) {
       if (!error && response.statusCode == 200) {
-        res.sched = csvjson.toObject(body, options);
+        let entries = csvjson.toObject(body, options);
+        let row = 0;
+        entries.forEach(entry =>  {
+          entry.row = row;
+          row++;
+         });
+         dbHelper.addToDB(JSON.stringify(entries));
+         
       }
       else {
         console.log('Could not retreive schedule');
