@@ -27,3 +27,8 @@ Start the development server with this command:
 ```
 npm start
 ```
+
+Then access it by visiting:
+```
+http://localhost:8080
+```
