@@ -5,7 +5,7 @@ const dbHelper = require('../controllers/dbHelper');
 // Use csvjson npm module from https://www.npmjs.com/package/csvjson
 const csvjson = require('csvjson');
 //Time to cache in ms
-const cacheTime = 30000;
+const cacheTime = 3000;
 
 
 //TODO ADD CACHING 30s
@@ -43,16 +43,20 @@ let schedules = {
     };
     //Create an array for all the documents to be put into response
     res.sched = [];
+    //Keep time that we downloaded the file last for caching purposes
+    let currTime = Date.now();
     let promises = [];
     request('http://developer.mbta.com/lib/gtrtfs/Departures.csv', function (error, response, body) {
       if (!error && response.statusCode == 200) {
         let entries = csvjson.toObject(body, options);
         let row = 0;
+
         entries.forEach(entry =>  {
           //Reset time to ms
           entry.ScheduledTime *= 1000;
           entry.TimeStamp *= 1000;
           entry.row = row;
+          entry.timeRetrieved = currTime;
           row++;
           promises.push(dbHelper.addToDB(entry));
          });
