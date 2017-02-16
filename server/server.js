@@ -41,6 +41,6 @@ app.get('/schedule', getSchedule.checkCache, getSchedule.download, function (req
   res.send(res.sched);
 } );
 
-app.listen(3000);
+app.listen(80);
 
 module.exports = app;
