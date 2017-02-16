@@ -72,14 +72,5 @@ class TrainSchedule extends React.Component {
     );
   }
 }
-//
-// <div>
 
-
-
-// <ul>
-//     {this.state.trains.map(train =>
-//       <li key={train.row}>{train.timeRetrieved}</li>
-//     )}
-// </ul>
 export default TrainSchedule;
