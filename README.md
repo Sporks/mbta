@@ -10,6 +10,9 @@ It uses nodejs, mongodb, react, webpack, babel, and a few other opensource tools
 Usage
 ---
 
+Visit https://cryptic-castle-38495.herokuapp.com/
+
+
 To run locally follow this guide:
 
 Install all dependencies needed by runnning
