@@ -11,7 +11,6 @@ import { Col, Panel } from 'react-bootstrap';
 
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(
-    // React.createElement(Temp),
     React.createElement(TrainSchedule),
     document.getElementById('mount')
   );
