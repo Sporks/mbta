@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import Temp from './Temp';
-import TrainSchedule from './TrainSchedule';
+import TrainSchedule from './trainschedule';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
 import { Col, Panel } from 'react-bootstrap';
