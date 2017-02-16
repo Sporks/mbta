@@ -66,9 +66,7 @@ class TrainSchedule extends React.Component {
           <TableHeaderColumn columnClassName='status'
             dataAlign='center' dataField='Status' width='200'>Status</TableHeaderColumn>
         </BootstrapTable>
-
       </div>
-
     );
   }
 }
