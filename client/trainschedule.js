@@ -38,29 +38,35 @@ class TrainSchedule extends React.Component {
   }
 
   trackFormatter(cell) {
-    console.log(cell)
-    return cell === null ? "TBD" : cell
+    return cell === null ? "TBD" : cell;
   }
 
   render() {
     return (
       <div>
-        <BootstrapTable data={this.state.trains.slice(0,15)} striped hover>
-          <TableHeaderColumn isKey dataField='Origin'>Origin</TableHeaderColumn>
-          <TableHeaderColumn dataFormat={ this.timeFormatter } dataField='ScheduledTime'>Time</TableHeaderColumn>
-          <TableHeaderColumn dataField='Destination'>Destination</TableHeaderColumn>
-          <TableHeaderColumn dataField='Trip'>Train</TableHeaderColumn>
-          <TableHeaderColumn dataFormat={ this.trackFormatter } dataField='Track'>Track</TableHeaderColumn>
-          <TableHeaderColumn dataField='Lateness'>Delay</TableHeaderColumn>
-          <TableHeaderColumn dataField='Status'>Status</TableHeaderColumn>
+        <div className='schedule'>
+          <button className='update'
+            onClick={() => {
+              this.update();
+            }}> Update Schedule </button>
+        </div>
+        <BootstrapTable data={this.state.trains.slice(0,18)} tableBodyClass='body' hover>
+          <TableHeaderColumn columnClassName='origin'
+            dataAlign='center' isKey dataField='Origin' width='150'>Origin</TableHeaderColumn>
+          <TableHeaderColumn columnClassName='time'
+            dataAlign='center' dataFormat={ this.timeFormatter } dataField='ScheduledTime' width='120'>Time</TableHeaderColumn>
+          <TableHeaderColumn columnClassName='dest'
+            dataAlign='center' dataField='Destination' width='200'>Destination</TableHeaderColumn>
+          <TableHeaderColumn columnClassName='trip'
+            dataAlign='center' dataField='Trip' width='70'>Train</TableHeaderColumn>
+          <TableHeaderColumn columnClassName='track'
+            dataAlign='center' dataFormat={ this.trackFormatter } dataField='Track' width='90'>Track</TableHeaderColumn>
+          <TableHeaderColumn columnClassName='delay'
+            dataAlign='center' dataField='Lateness' width='90'>Delay</TableHeaderColumn>
+          <TableHeaderColumn columnClassName='status'
+            dataAlign='center' dataField='Status' width='200'>Status</TableHeaderColumn>
         </BootstrapTable>
-        <button
-          onClick={() => {
-            this.update();
-          }}
-        >
-          Update Schedule
-        </button>
+
       </div>
 
     );
