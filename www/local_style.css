@@ -7,11 +7,9 @@ body{
   align-items: center;
   justify-content: space-between;
 }
-
 .info{
   font-size:140%;
 }
-
 .board{
   font-size: 150%;
   color: white;
@@ -19,12 +17,10 @@ body{
 .currtime{
   color: white;
 }
-
 .day{
   color: #e2e53d;
   font-size: 145%;
 }
-
 .datetime{
   flex-grow: 1;
   display:flex;
@@ -32,19 +28,16 @@ body{
   font-size: 190%;
   color: #e2e53d;
 }
-
 .greentext{
   color:#00ce03;
   font-stretch: expanded;
   font-size: 140%;
 }
-
 .yellowtext{
   color:#e2e53d;
   font-stretch: expanded;
   font-size: 140%;
 }
-
 .disp{
   font-family: 'VT323', monospace;
 }
