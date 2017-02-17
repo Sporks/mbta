@@ -3,6 +3,7 @@ MBTA Schedule
 
 This is a display board showing the status of 14 trains that will depart the soonest.
 It can be easily modified to show greater or fewer trains.
+It also updates itself every 30 seconds.
 
 All data is being pulled from the csv file that the MBTA publishes.  I am assuming all that data is valid.
 
