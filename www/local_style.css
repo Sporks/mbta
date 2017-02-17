@@ -1,12 +1,68 @@
-.origin{
-
+body{
+  background-color: #111;
 }
-
-.schedule{
+.info{
+  flex-grow: 1;
   display:flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.update{
+.info{
+  font-size:140%;
+}
 
+.board{
+  font-size: 150%;
+  color: white;
+}
+.currtime{
+  color: white;
+}
+
+.day{
+  color: #e2e53d;
+  font-size: 145%;
+}
+
+.datetime{
+  flex-grow: 1;
+  display:flex;
+  justify-content: space-between;
+  font-size: 190%;
+  color: #e2e53d;
+}
+
+.greentext{
+  color:#00ce03;
+  font-stretch: expanded;
+  font-size: 140%;
+}
+
+.yellowtext{
+  color:#e2e53d;
+  font-stretch: expanded;
+  font-size: 140%;
+}
+.react-bs-table{
+  border: 0px;
+}
+
+.disp{
+  font-family: 'VT323', monospace;
+}
+
+.table thead tr th{
+  border: 0px;
+  text-align: center !important;
+}
+.table tbody tr td{
+  border-top: 0px !important;
+}
+.tableheader{
+  color: white;
+  text-transform: uppercase;
+}
+.tablebody{
+  text-transform: uppercase;
 }
