@@ -2,10 +2,11 @@ MBTA Schedule
 ---
 
 This is a display board showing the status of 14 trains that will depart the soonest.
-
 It can be easily modified to show greater or fewer trains.
 
-It uses nodejs, mongodb, react, webpack, babel, and a few other opensource tools
+All data is being pulled from the csv file that the MBTA publishes.  I am assuming all that data is valid.
+
+It uses nodejs, mongodb, react, react-bootstrap-table, webpack, babel, and a few other opensource tools
 
 Usage
 ---
