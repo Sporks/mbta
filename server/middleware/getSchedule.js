@@ -51,6 +51,9 @@ let schedules = {
         let entries = csvjson.toObject(body, options);
         let row = 0;
 
+        entries.sort(function(a, b) {
+          return a.ScheduledTime - b.ScheduledTime;
+        });
         entries.forEach(entry =>  {
           //Reset time to ms
           entry.ScheduledTime *= 1000;
