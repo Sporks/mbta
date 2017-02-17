@@ -68,7 +68,7 @@ class TrainSchedule extends React.Component {
           </div>
         </div>
 
-        <BootstrapTable data={this.state.trains.slice(0,14)} bordered={false} 
+        <BootstrapTable data={this.state.trains.slice(0,14)} bordered={false}
         tableHeaderClass='tableheader' tableBodyClass='tablebody'>
           <TableHeaderColumn columnClassName='yellowtext disp'
             dataAlign='left' isKey dataField='Origin' width='150'>Origin</TableHeaderColumn>
@@ -83,7 +83,7 @@ class TrainSchedule extends React.Component {
           <TableHeaderColumn columnClassName='greentext disp'
             dataAlign='center' dataField='Lateness' width='90'>Delay</TableHeaderColumn>
           <TableHeaderColumn columnClassName='greentext disp'
-            dataAlign='left' dataField='Status' width='200'>Status</TableHeaderColumn>
+            dataAlign='left' dataField='Status' width='160'>Status</TableHeaderColumn>
         </BootstrapTable>
       </div>
     );
