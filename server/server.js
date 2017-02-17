@@ -37,7 +37,6 @@ app.use(webpackDevMiddleware(compiler, {
 
 
 app.get('/schedule', getSchedule.checkCache, getSchedule.download, function (req, res) {
-  // console.log(res.sched);
   res.send(res.sched);
 } );
 
