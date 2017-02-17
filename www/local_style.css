@@ -44,14 +44,13 @@ body{
   font-stretch: expanded;
   font-size: 140%;
 }
-.react-bs-table{
-  border: 0px;
-}
 
 .disp{
   font-family: 'VT323', monospace;
 }
-
+.react-bs-table{
+  border: 0px;
+}
 .table thead tr th{
   border: 0px;
   text-align: center !important;

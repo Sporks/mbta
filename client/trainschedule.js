@@ -68,7 +68,7 @@ class TrainSchedule extends React.Component {
           </div>
         </div>
 
-        <BootstrapTable data={this.state.trains.slice(0,18)} bordered={false} headerStyle={ { 'text-align': '#00ff00' } }
+        <BootstrapTable data={this.state.trains.slice(0,14)} bordered={false} 
         tableHeaderClass='tableheader' tableBodyClass='tablebody'>
           <TableHeaderColumn columnClassName='yellowtext disp'
             dataAlign='left' isKey dataField='Origin' width='150'>Origin</TableHeaderColumn>

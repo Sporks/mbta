@@ -1,7 +1,7 @@
 MBTA Schedule
 ---
 
-This is a display board showing the status of 16 trains that will depart the soonest.
+This is a display board showing the status of 14 trains that will depart the soonest.
 
 It can be easily modified to show greater or fewer trains.
 
